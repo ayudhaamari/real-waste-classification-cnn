@@ -28,11 +28,11 @@ We use the [RealWaste dataset](https://archive.ics.uci.edu/dataset/908/realwaste
 
 ## 🚀 Features
 
-- 📊 **Exploratory Data Analysis (EDA)**: Visualize dataset distribution and sample images.
-- 🔮 **Prediction**: Classify waste images using the trained CNN model.
+- 📊 **Exploratory Data Analysis (EDA)**: Visualizes dataset distribution and sample images.
+- 🔮 **Prediction**: Classifies waste images using the trained CNN model.
 - 🖥️ **Interactive Web Interface**: Built with Streamlit for easy use and deployment.
-- 📈 **Performance Metrics**: Detailed model evaluation including accuracy, precision, recall, and F1-score.
-- 🔄 **Data Augmentation**: Techniques to increase dataset diversity and model robustness.
+- 📈 **Performance Metrics**: Provides detailed model evaluation including accuracy, precision, recall, and F1-score.
+- 🔄 **Data Augmentation**: Employs techniques to increase dataset diversity and model robustness.
 
 ## 🛠️ Technologies Used
 
@@ -64,7 +64,7 @@ We use the [RealWaste dataset](https://archive.ics.uci.edu/dataset/908/realwaste
 
 ### 🧠 The Brain Behind the Magic: InceptionV3
 
-We're not just using any CNN - we're leveraging the mighty InceptionV3 architecture! Here's why it's awesome:
+This project doesn't just use any CNN - it leverages the InceptionV3 architecture! Here's some details:
 
 - 🏗️ **Architecture**: 48 layers deep, including convolutions, max pooling, average pooling, concatenations, dropouts, and fully connected layers.
 - 🔍 **Inception Modules**: Utilizes parallel convolutions of different sizes for multi-scale processing.
@@ -75,7 +75,7 @@ We're not just using any CNN - we're leveraging the mighty InceptionV3 architect
 
 ## 📊 Model Performance
 
-Our current model achieves an accuracy of 82% on the test set. Detailed metrics:
+The current model achieves an accuracy of 82% on the test set. Detailed metrics:
 
 - Precision: 0.83
 - Recall: 0.81
@@ -86,7 +86,7 @@ Here's a visual representation of our model's learning curve:
 ![Model Learning Curve](images/performance.jpg)
 *Learning curve showing the model's training and validation performance over epochs*
 
-This plot provides insights into how our model's performance improved during the training process, helping us understand its learning dynamics and potential areas for optimization.
+This plot provides insights into how the model's performance improved during the training process, helping to understand its learning dynamics and potential areas for optimization.
 
 ## 🌐 Deployment
 
@@ -100,7 +100,7 @@ Check out our waste classification model in action! This demo shows how easy it 
 
 ## 🔮 Future Improvements
 
-We're constantly working to enhance our waste classification system. Some areas we're exploring include:
+The project team is constantly working to enhance the waste classification system. Some areas being explored include:
 
 - Implementing object detection to classify multiple waste items in a single image
 - Expanding the dataset to include more diverse waste types
@@ -108,7 +108,7 @@ We're constantly working to enhance our waste classification system. Some areas 
 
 ## 💡 Real-World Applications
 
-Our waste classification system has numerous potential applications:
+This waste classification system has numerous potential applications:
 
 1. **Smart Bins**: Automating waste sorting in public spaces
 2. **Recycling Plants**: Enhancing sorting efficiency in recycling facilities
