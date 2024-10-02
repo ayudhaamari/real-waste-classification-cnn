@@ -2,6 +2,31 @@
 
 ![Waste Classification](https://assets-a1.kompasiana.com/items/album/2021/03/14/dr-stone-fandomcom-1536x864-604dff978ede483a3b589c96.png?t=o&v=780)
 
+<table style="width: 100%; text-align: center; border-collapse: collapse;">
+    <tr>
+        <th style="padding: 10px;">Dataset</th>
+        <th style="padding: 10px;">Deployment</th>
+        <th style="padding: 10px;">Model</th>
+    </tr>
+    <tr>
+        <td style="padding: 10px;">
+            <a href="https://archive.ics.uci.edu/dataset/908/realwaste">
+                <img src="https://img.shields.io/badge/Dataset-RealWaste-orange" alt="Dataset">
+            </a>
+        </td>
+        <td style="padding: 10px;">
+            <a href="https://huggingface.co/spaces/amariayudha/RealWaste_Prediction_Deep_Learning">
+                <img src="https://img.shields.io/badge/Demo-Hugging%20Face-blue" alt="Hugging Face Demo">
+            </a>
+        </td>
+        <td style="padding: 10px;">
+            <a href="https://drive.google.com/drive/folders/174TT5ANFTS3_uztj8z8GCFGldxJErAId?usp=sharing">
+                <img src="https://img.shields.io/badge/Model-Google%20Drive-green" alt="Model">
+            </a>
+        </td>
+    </tr>
+</table>
+
 ## 🌟 Project Overview
 
 This project develops a Convolutional Neural Network (CNN) model for classifying waste images into nine distinct material types. Our goal is to automate and improve waste management efficiency, ultimately contributing to environmental sustainability.
@@ -34,16 +59,16 @@ We use the [RealWaste dataset](https://archive.ics.uci.edu/dataset/908/realwaste
 - 📈 **Performance Metrics**: Provides detailed model evaluation including accuracy, precision, recall, and F1-score.
 - 🔄 **Data Augmentation**: Employs techniques to increase dataset diversity and model robustness.
 
-## 🛠️ Technologies Used
+## 🛠 Technologies Used
 
-- 🐍 Python
-- 🧠 TensorFlow
-- 🌊 Streamlit
-- 🐼 Pandas
-- 📊 Plotly
-- 📉 Matplotlib
-- 🌈 Seaborn
-- 🖼️ OpenCV
+- ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=Python&logoColor=white) Python
+- ![TensorFlow](https://img.shields.io/badge/-TensorFlow-FF6F00?style=flat-square&logo=TensorFlow&logoColor=white) TensorFlow
+- ![Streamlit](https://img.shields.io/badge/-Streamlit-FF4B4B?style=flat-square&logo=Streamlit&logoColor=white) Streamlit
+- ![Pandas](https://img.shields.io/badge/-Pandas-150458?style=flat-square&logo=Pandas&logoColor=white) Pandas
+- ![Plotly](https://img.shields.io/badge/-Plotly-3F4F75?style=flat-square&logo=Plotly&logoColor=white) Plotly
+- ![Matplotlib](https://img.shields.io/badge/-Matplotlib-11557C?style=flat-square&logo=Python&logoColor=white) Matplotlib
+- ![Seaborn](https://img.shields.io/badge/-Seaborn-3776AB?style=flat-square&logo=Python&logoColor=white) Seaborn
+- ![OpenCV](https://img.shields.io/badge/-OpenCV-5C3EE8?style=flat-square&logo=OpenCV&logoColor=white) OpenCV
 
 ## 🖥️ Installation & Usage
 
