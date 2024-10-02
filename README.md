@@ -92,6 +92,38 @@ This plot provides insights into how our model's performance improved during the
 
 The project is deployed on Hugging Face Spaces. You can access it [here](https://huggingface.co/spaces/amariayudha/RealWaste_Prediction_Deep_Learning).
 
+## 🎥 Live Demo
+
+![Waste Classification Demo](path/to/demo.gif)
+
+Check out our waste classification model in action! This demo shows how easy it is to upload an image and get instant classification results.
+
+## 🔮 Future Improvements
+
+We're constantly working to enhance our waste classification system. Some areas we're exploring include:
+
+- Implementing object detection to classify multiple waste items in a single image
+- Expanding the dataset to include more diverse waste types
+- Experimenting with newer architectures like EfficientNet for potentially improved performance
+
+## 💡 Real-World Applications
+
+Our waste classification system has numerous potential applications:
+
+1. **Smart Bins**: Automating waste sorting in public spaces
+2. **Recycling Plants**: Enhancing sorting efficiency in recycling facilities
+3. **Educational Tools**: Teaching proper waste segregation in schools and communities
+4. **Waste Management Apps**: Integrating with mobile apps to help users properly dispose of items
+
+## 🌍 Environmental Impact
+
+By improving waste classification accuracy, this project aims to:
+
+- Increase recycling rates
+- Reduce contamination in recycling streams
+- Lower the amount of waste sent to landfills
+- Promote circular economy principles
+
 ## 📁 Project Structure
 
 ```
