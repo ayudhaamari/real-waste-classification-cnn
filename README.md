@@ -29,7 +29,7 @@
 
 ## 🌟 Project Overview
 
-This project develops a Convolutional Neural Network (CNN) model for classifying waste images into nine distinct material types. Our goal is to automate and improve waste management efficiency, ultimately contributing to environmental sustainability.
+This project focuses on developing a Convolutional Neural Network (CNN) model for classifying waste images into nine distinct material types. By automating the waste sorting process, we aim to enhance recycling efficiency and contribute to environmental sustainability.
 
 ### 🎯 Objective
 
@@ -37,26 +37,45 @@ Develop a deep learning-based waste classification system using a CNN that can a
 
 ### 📊 Dataset
 
-We use the [RealWaste dataset](https://archive.ics.uci.edu/dataset/908/realwaste), containing images of waste items across 9 major material types, collected within an authentic landfill environment.
+We utilize the [RealWaste dataset](https://archive.ics.uci.edu/dataset/908/realwaste), which contains images of waste items across 9 major material types, collected within an authentic landfill environment.
+
+## 🗒️ Table of Contents
+
+- [Waste Categories](#-waste-categories)
+- [Features](#-features)
+- [Technologies Used](#-technologies-used)
+- [Installation & Usage](#-installation--usage)
+- [The Brain Behind the Magic: InceptionV3](#-the-brain-behind-the-magic-inceptionv3)
+- [Model Performance](#-model-performance)
+- [Live Demo](#-live-demo)
+- [Deployment](#-deployment)
+- [Future Improvements](#-future-improvements)
+- [Real-World Applications](#-real-world-applications)
+- [Environmental Impact](#-environmental-impact)
+- [Project Structure](#-project-structure)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Contact](#-contact)
+- [Acknowledgements](#-acknowledgements)
 
 ## 🗑️ Waste Categories
 
-1. 📦 Cardboard
-2. 🍾 Glass
-3. 🥫 Metal
-4. 📰 Paper
-5. 🥤 Plastic
-6. 🚮 Miscellaneous Trash
-7. 🍎 Food Organics
-8. 👕 Textile Trash
-9. 🌿 Vegetation
+1. 📦 **Cardboard**
+2. 🍾 **Glass**
+3. 🥫 **Metal**
+4. 📰 **Paper**
+5. 🥤 **Plastic**
+6. 🚮 **Miscellaneous Trash**
+7. 🍎 **Food Organics**
+8. 👕 **Textile Trash**
+9. 🌿 **Vegetation**
 
 ## 🚀 Features
 
 - 📊 **Exploratory Data Analysis (EDA)**: Visualizes dataset distribution and sample images.
 - 🔮 **Prediction**: Classifies waste images using the trained CNN model.
 - 🖥️ **Interactive Web Interface**: Built with Streamlit for easy use and deployment.
-- 📈 **Performance Metrics**: Provides detailed model evaluation including accuracy, precision, recall, and F1-score.
+- 📈 **Performance Metrics**: Provides detailed model evaluation including accuracy, precision, recall, F1-score, and confusion matrix.
 - 🔄 **Data Augmentation**: Employs techniques to increase dataset diversity and model robustness.
 
 ## 🛠 Technologies Used
@@ -72,50 +91,105 @@ We use the [RealWaste dataset](https://archive.ics.uci.edu/dataset/908/realwaste
 
 ## 🖥️ Installation & Usage
 
-1. Clone the repository:
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/yourusername/real-waste-classification-cnn.git
    ```
-
-2. Install required packages:
+2. **Navigate to the project directory:**
+   ```bash
+   cd real-waste-classification-cnn
+   ```
+3. **Install required packages:**
    ```bash
    pip install -r deployment/requirements.txt
    ```
-
-3. Run the Streamlit app:
+4. **Download the pre-trained model:**
+   - Download the model from [Google Drive](https://drive.google.com/drive/folders/174TT5ANFTS3_uztj8z8GCFGldxJErAId?usp=sharing).
+   - Place the downloaded model file into the `model/` directory.
+5. **Run the Streamlit app:**
    ```bash
    streamlit run deployment/app.py
    ```
+6. **Access the web application:**
+   - Open your browser and navigate to `http://localhost:8501`.
 
-### 🧠 The Brain Behind the Magic: InceptionV3
+## 🧠 The Brain Behind the Magic: InceptionV3
 
-This project doesn't just use any CNN - it leverages the InceptionV3 architecture! Here's some details:
+This project leverages the powerful **InceptionV3** architecture, a state-of-the-art convolutional neural network designed for both efficiency and performance.
 
-- 🏗️ **Architecture**: 48 layers deep, including convolutions, max pooling, average pooling, concatenations, dropouts, and fully connected layers.
-- 🔍 **Inception Modules**: Utilizes parallel convolutions of different sizes for multi-scale processing.
-- 🏋️ **Efficient Computing**: Employs factorized convolutions and aggressive dimension reductions.
-- 🌐 **Global Context**: Incorporates auxiliary classifiers for better gradient flow and regularization.
-- 📊 **Parameters**: Approximately 23.9 million parameters - powerful yet manageable!
+### 🏗️ Architecture Overview
 
+InceptionV3 is approximately **48 layers** deep and is composed of various building blocks, including:
+
+- **Convolutions**
+- **Max Pooling and Average Pooling**
+- **Dropouts**
+- **Fully Connected Layers**
+
+![InceptionV3 Architecture](images/inceptionv3_architecture.png)
+*Diagram of the InceptionV3 architecture.*
+
+### 🔍 Inception Modules
+
+- **Parallel Convolutions**: Processes input data through multiple convolutional layers with different filter sizes (1x1, 3x3, 5x5) simultaneously, capturing features at various scales.
+- **Dimensionality Reduction**: Uses 1x1 convolutions to reduce the number of feature maps, decreasing computational cost without losing information.
+
+### 🏋️ Efficient Computing
+
+- **Factorized Convolutions**: Breaks down larger convolutions into smaller, more efficient operations (e.g., a 5x5 convolution into two 3x3 convolutions).
+- **Asymmetric Convolutions**: Uses combinations like 1x7 followed by 7x1 convolutions to replace a single 7x7 convolution, further reducing computation.
+
+### 🌐 Auxiliary Classifiers
+
+- **Improved Gradient Flow**: Incorporates auxiliary classifiers connected to intermediate layers to help mitigate the vanishing gradient problem.
+- **Regularization**: Acts as an additional form of regularization during training, improving generalization.
+
+### 📊 Parameters
+
+- **Manageable Size**: Approximately **23.9 million parameters**, striking a balance between complexity and computational efficiency.
+- **Fine-Tuning**: We fine-tuned the pre-trained InceptionV3 model on our waste classification dataset to enhance performance.
+
+### 🔧 Customization for Waste Classification
+
+- **Modified Output Layer**: Adjusted the final dense layer to output predictions for **9 classes** corresponding to the waste categories.
+- **Data Augmentation**: Applied transformations such as rotation, flipping, zooming, and brightness adjustment to increase dataset variability.
+- **Optimization Techniques**: Employed the **Adam** optimizer and **categorical cross-entropy** loss function for efficient training.
 
 ## 📊 Model Performance
 
-The current model achieves an accuracy of 82% on the test set. Detailed metrics:
+The current model achieves an accuracy of **82%** on the test set. Below are detailed performance metrics:
 
-- Precision: 0.83
-- Recall: 0.81
-- F1-Score: 0.82
+- **Accuracy**: 0.82
+- **Precision**: 0.83
+- **Recall**: 0.81
+- **F1-Score**: 0.82
 
-Here's a visual representation of our model's learning curve:
+### 📝 Class-wise Performance
+
+| Category             | Precision | Recall | F1-Score | Support |
+|----------------------|-----------|--------|----------|---------|
+| Cardboard            | 0.75      | 0.87   | 0.81     | 46      |
+| Food Organics        | 0.88      | 0.68   | 0.77     | 41      |
+| Glass                | 0.75      | 0.95   | 0.84     | 42      |
+| Metal                | 0.85      | 0.86   | 0.86     | 79      |
+| Miscellaneous Trash  | 0.67      | 0.74   | 0.70     | 50      |
+| Paper                | 0.88      | 0.84   | 0.86     | 50      |
+| Plastic              | 0.93      | 0.67   | 0.78     | 92      |
+| Textile Trash        | 0.77      | 0.94   | 0.85     | 32      |
+| Vegetation           | 0.86      | 0.95   | 0.90     | 44      |
+
+
+### 📉 Confusion Matrix
+
+![Confusion Matrix](images/confusion_matrix.png)
+*Confusion matrix illustrating the model's performance across different categories.*
+
+### 📈 Learning Curve
 
 ![Model Learning Curve](images/performance.jpg)
-*Learning curve showing the model's training and validation performance over epochs*
+*Learning curve showing the model's training and validation performance over epochs.*
 
 This plot provides insights into how the model's performance improved during the training process, helping to understand its learning dynamics and potential areas for optimization.
-
-## 🌐 Deployment
-
-The project is deployed on Hugging Face Spaces. You can access it [here](https://huggingface.co/spaces/amariayudha/RealWaste_Prediction_Deep_Learning).
 
 ## 🎥 Live Demo
 
@@ -126,6 +200,7 @@ Our interactive demo is divided into three main sections, each serving a unique 
 ![Homepage Demo](images/homepage.gif)
 
 The homepage provides an overview of the project, including:
+
 - Brief introduction to the waste classification problem
 - Key features of our CNN model
 - Quick stats on model performance
@@ -136,6 +211,7 @@ The homepage provides an overview of the project, including:
 ![EDA Demo](images/eda.gif)
 
 The EDA section offers insights into our dataset:
+
 - Distribution of waste categories
 - Sample images from each category
 - Data augmentation examples
@@ -146,6 +222,7 @@ The EDA section offers insights into our dataset:
 ![Prediction Demo](images/prediction.gif)
 
 The prediction section allows users to interact with our model:
+
 - Upload or select an image of waste
 - View the model's classification result
 - See confidence scores for top predictions
@@ -153,31 +230,37 @@ The prediction section allows users to interact with our model:
 
 Check out our waste classification model in action! This demo shows how easy it is to navigate through different sections, explore the dataset, and get instant classification results for waste images.
 
+## 🌐 Deployment
+
+The project is deployed on Hugging Face Spaces. You can access it [here](https://huggingface.co/spaces/amariayudha/RealWaste_Prediction_Deep_Learning).
+
 ## 🔮 Future Improvements
 
-The project team is constantly working to enhance the waste classification system. Some areas being explored include:
+From this project, you can continuously working to enhance the waste classification system. Future improvements include:
 
-- Implementing object detection to classify multiple waste items in a single image
-- Expanding the dataset to include more diverse waste types
-- Experimenting with newer architectures like EfficientNet for potentially improved performance
+- **Object Detection**: Implementing algorithms like YOLO or Faster R-CNN to detect and classify multiple waste items within a single image.
+- **Dataset Expansion**: Collecting more data to cover a wider variety of waste items and improve model generalization.
+- **Advanced Architectures**: Experimenting with architectures like **EfficientNet** or **ResNeXt** for potentially improved performance.
+- **Edge Deployment**: Optimizing the model for deployment on edge devices like smartphones and Raspberry Pi for real-time waste classification.
+- **User Feedback Loop**: Incorporating user feedback to continually improve model accuracy and reliability.
 
 ## 💡 Real-World Applications
 
 This waste classification system has numerous potential applications:
 
-1. **Smart Bins**: Automating waste sorting in public spaces
-2. **Recycling Plants**: Enhancing sorting efficiency in recycling facilities
-3. **Educational Tools**: Teaching proper waste segregation in schools and communities
-4. **Waste Management Apps**: Integrating with mobile apps to help users properly dispose of items
+1. **Smart Bins**: Automating waste sorting in public spaces to improve recycling rates.
+2. **Recycling Plants**: Enhancing sorting efficiency in recycling facilities, reducing manual labor.
+3. **Educational Tools**: Teaching proper waste segregation in schools and communities through interactive apps.
+4. **Waste Management Apps**: Integrating with mobile apps to help users properly dispose of items by scanning them.
 
 ## 🌍 Environmental Impact
 
 By improving waste classification accuracy, this project aims to:
 
-- Increase recycling rates
-- Reduce contamination in recycling streams
-- Lower the amount of waste sent to landfills
-- Promote circular economy principles
+- **Increase Recycling Rates**: Proper sorting leads to more materials being recycled.
+- **Reduce Contamination**: Minimizes contamination in recycling streams, improving the quality of recycled materials.
+- **Lower Landfill Waste**: Reduces the amount of waste sent to landfills, decreasing greenhouse gas emissions.
+- **Promote Circular Economy**: Encourages the reuse and recycling of materials, supporting sustainable resource management.
 
 ## 📁 Project Structure
 
@@ -191,14 +274,48 @@ real-waste-classification-cnn/
 │   ├── prediction.py        # Prediction functionality
 │   └── requirements.txt     # Deployment requirements
 │
-├── realwaste-image-classification.ipynb  # Notebook for model training and analysis
-├── realwaste-image-classification-inference.ipynb          # Notebook for model inference and testing
+├── images/                  # Images used in README and documentation
+│   ├── performance.jpg
+│   ├── inceptionv3_architecture.png
+│   ├── confusion_matrix.png
+│   └── ...                  # Other images and diagrams
+│
+├── model/                   # Directory for the trained model
+│   └── inceptionv3_model.h5
+│
+├── notebooks/
+│   ├── realwaste-image-classification.ipynb         # Notebook for model training and analysis
+│   └── realwaste-image-classification-inference.ipynb  # Notebook for model inference and testing
+│
+├── data/                    # Dataset files (if applicable)
+│   └── ...                  
+│
+├── LICENSE                  # License file
+├── README.md                # Project README
 └── url.txt                  # Contains links to dataset, deployment, and model
 ```
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please follow these steps:
+
+1. **Fork the repository** on GitHub.
+2. **Clone your fork** locally:
+   ```bash
+   git clone https://github.com/yourusername/real-waste-classification-cnn.git
+   ```
+3. **Create a new branch** for your feature or bugfix:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+4. **Commit your changes** and push to your fork:
+   ```bash
+   git commit -am 'Add new feature'
+   git push origin feature/your-feature-name
+   ```
+5. **Create a Pull Request** against the main repository.
+
+Please ensure your code follows the project's coding standards and includes appropriate tests.
 
 ## 📄 License
 
@@ -206,9 +323,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-**Ayudha Amari Hirtranusi** 
-- 🌐 **Github**: [www.github.com/ayudhaamari](https://github.com/ayudhaamari)
-- 💼 **LinkedIn**: [www.linkedin.com/in/ayudhaamari/](https://www.linkedin.com/in/ayudhaamari/)
+**Ayudha Amari Hirtranusi**
+
+- 🌐 **GitHub**: [github.com/ayudhaamari](https://github.com/ayudhaamari)
+- 💼 **LinkedIn**: [linkedin.com/in/ayudhaamari/](https://www.linkedin.com/in/ayudhaamari/)
 - 📧 **Email**: amariayudha@gmail.com
 
 ## 🙏 Acknowledgements
@@ -216,6 +334,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [RealWaste Dataset](https://archive.ics.uci.edu/dataset/908/realwaste) creators
 - [Streamlit](https://streamlit.io/) for the amazing web app framework
 - [TensorFlow](https://www.tensorflow.org/) team for the powerful deep learning library
+- [Keras Applications](https://keras.io/api/applications/) for providing pre-trained models
 
 ---
 
