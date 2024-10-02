@@ -341,4 +341,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ⭐️ If you find this project useful, please consider giving it a star!
 
 > [!NOTE]
-> For comprehensive explanations and code implementations, please refer to the [`realwaste-image-classification.ipynb`](notebooks/realwaste-image-classification.ipynb) notebook. It provides step-by-step instructions and insights that complement this README.
+> For comprehensive explanations and code implementations, please refer to the [`realwaste-image-classification.ipynb`](/realwaste-image-classification.ipynb) notebook. It provides step-by-step instructions and insights that complement this README.
