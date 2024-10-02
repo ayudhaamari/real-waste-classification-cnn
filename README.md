@@ -62,6 +62,17 @@ We use the [RealWaste dataset](https://archive.ics.uci.edu/dataset/908/realwaste
    streamlit run deployment/app.py
    ```
 
+### 🧠 The Brain Behind the Magic: InceptionV3
+
+We're not just using any CNN - we're leveraging the mighty InceptionV3 architecture! Here's why it's awesome:
+
+- 🏗️ **Architecture**: 48 layers deep, including convolutions, max pooling, average pooling, concatenations, dropouts, and fully connected layers.
+- 🔍 **Inception Modules**: Utilizes parallel convolutions of different sizes for multi-scale processing.
+- 🏋️ **Efficient Computing**: Employs factorized convolutions and aggressive dimension reductions.
+- 🌐 **Global Context**: Incorporates auxiliary classifiers for better gradient flow and regularization.
+- 📊 **Parameters**: Approximately 23.9 million parameters - powerful yet manageable!
+
+
 ## 📊 Model Performance
 
 Our current model achieves an accuracy of 82% on the test set. Detailed metrics:
@@ -79,33 +90,16 @@ The project is deployed on Hugging Face Spaces. You can access it [here](https:/
 ```
 real-waste-classification-cnn/
 │
-├── data/
-│   ├── raw/                 # Raw dataset
-│   └── processed/           # Processed dataset
-│
-├── notebooks/
-│   ├── 01_data_exploration.ipynb
-│   ├── 02_data_preprocessing.ipynb
-│   └── 03_model_training.ipynb
-│
-├── src/
-│   ├── data/                # Data processing scripts
-│   ├── models/              # Model architecture and training scripts
-│   └── utils/               # Utility functions
-│
 ├── deployment/
-│   ├── app.py               # Streamlit app
+│   ├── visualization/       # Visualization scripts and assets
+│   ├── app.py               # Main Streamlit application
+│   ├── eda.py               # Exploratory Data Analysis script
+│   ├── prediction.py        # Prediction functionality
 │   └── requirements.txt     # Deployment requirements
 │
-├── tests/                   # Unit tests
-│
-├── models/                  # Saved model files
-│
-├── docs/                    # Documentation
-│
-├── .gitignore
-├── README.md
-└── requirements.txt         # Development requirements
+├── realwaste-image-classification.ipynb  # Notebook for model training and analysis
+├── realwaste-image-classification-inference.ipynb          # Notebook for model inference and testing
+└── url.txt                  # Contains links to dataset, deployment, and model
 ```
 
 ## 🤝 Contributing
@@ -118,7 +112,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-For any queries, please reach out to [your-email@example.com](mailto:your-email@example.com).
+**Ayudha Amari Hirtranusi** 
+- 🌐 **Github**: [www.github.com/ayudhaamari](https://github.com/ayudhaamari)
+- 💼 **LinkedIn**: [www.linkedin.com/in/ayudhaamari/](https://www.linkedin.com/in/ayudhaamari/)
+- 📧 **Email**: amariayudha@gmail.com
 
 ## 🙏 Acknowledgements
 
