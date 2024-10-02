@@ -81,6 +81,13 @@ Our current model achieves an accuracy of 82% on the test set. Detailed metrics:
 - Recall: 0.81
 - F1-Score: 0.82
 
+Here's a visual representation of our model's learning curve:
+
+![Model Learning Curve](images/performance.jpg)
+*Learning curve showing the model's training and validation performance over epochs*
+
+This plot provides insights into how our model's performance improved during the training process, helping us understand its learning dynamics and potential areas for optimization.
+
 ## 🌐 Deployment
 
 The project is deployed on Hugging Face Spaces. You can access it [here](https://huggingface.co/spaces/amariayudha/RealWaste_Prediction_Deep_Learning).
