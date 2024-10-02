@@ -119,9 +119,39 @@ The project is deployed on Hugging Face Spaces. You can access it [here](https:/
 
 ## 🎥 Live Demo
 
-![Waste Classification Demo](path/to/demo.gif)
+Our interactive demo is divided into three main sections, each serving a unique purpose in showcasing the waste classification system:
 
-Check out our waste classification model in action! This demo shows how easy it is to upload an image and get instant classification results.
+### 1. 🏠 Homepage
+
+![Homepage Demo](images/homepage.gif)
+
+The homepage provides an overview of the project, including:
+- Brief introduction to the waste classification problem
+- Key features of our CNN model
+- Quick stats on model performance
+- Navigation to other sections
+
+### 2. 📊 Exploratory Data Analysis (EDA)
+
+![EDA Demo](images/eda.gif)
+
+The EDA section offers insights into our dataset:
+- Distribution of waste categories
+- Sample images from each category
+- Data augmentation examples
+- Key statistics about the dataset
+
+### 3. 🔮 Prediction
+
+![Prediction Demo](images/prediction.gif)
+
+The prediction section allows users to interact with our model:
+- Upload or select an image of waste
+- View the model's classification result
+- See confidence scores for top predictions
+- Compare with sample images from the predicted category
+
+Check out our waste classification model in action! This demo shows how easy it is to navigate through different sections, explore the dataset, and get instant classification results for waste images.
 
 ## 🔮 Future Improvements
 
